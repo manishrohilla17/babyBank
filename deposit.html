@@ -8,19 +8,11 @@
 				color: red;
 				font-size: small;
 			}
-			#loan:hover{
-				color: blue;
-				font-size: large;
-				text-decoration: underline;
-			}
 		</style>
 	</head>
 	<body>
-		<div align="center"><h1>OUR SERVICES</h1></div>
+		<div align="center"><h1>DEPOSIT</h1></div>
 		<div>
-			<h3>Following are the few services which bank provides :</h3>
-			<ul>
-				<li id="loan" onclick="showForm()">Loan</li>
 				<form id="myForm" action="#" method="post">
 					<br>
 					Applicant: <input type="text" name="Applicant" required /><br><br>
@@ -34,19 +26,10 @@
 					ROI(%):<input type="number" name="amount" id="roi" disabled required/><br><br>
 					Duration(in years): <input type="number" name="duration" id="duration" onkeyup="onDurationChange()" required /><br>
 					<span id="error"></span><br>
-					EMI:<input type="number" name="emi" id="emi" disabled required/><br><br>
+					Maturity:<input type="number" name="emi" id="emi" disabled required/><br><br>
 					<input type="submit" value="Submit"/>
 					<input type="reset" value="Reset"><br><br>
 				</form>
-				<li><a href="./deposit.html">Deposit</a></li>
-				<li>Cheque payments</li>
-				<li>Discounting on bills of exchange</li>
-				<li>Collecting and paying the credit instruments</li>
-				<li>Guarantee by banks</li>
-				<li>Consultancy</li>
-				<li>Credit cards</li>
-				<li>Funds remittance</li>
-				<li>Debit cards</li>
 			</ul>
 		</div>
 	</body>
@@ -105,16 +88,6 @@
 				}
 			}
 		}
-
-		function showForm(){
-			if(document.getElementById("myForm").style.display == "none"){
-				document.getElementById("myForm").style.display = "block"
-			}
-			else{
-				document.getElementById("myForm").style.display = "none"
-			}
-		}
-
 		function compute(){
 			var amount = document.getElementById("amount").value
 			var duration = document.getElementById("duration").value
